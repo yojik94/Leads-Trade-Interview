@@ -1,0 +1,38 @@
+@import '../../scss/commons';
+
+//@return .thanksModal
+@include b(thanksModal){
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0, .7);
+  z-index: 22;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+  text-align: center;
+
+  //@return .thanksModal__content
+  @include e(content){
+    max-width: 700px;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: white;
+    font-size: 28px;
+    color: $red;
+    position: relative;
+  }
+
+  //@return .thanksModal__close
+  @include e(close){
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+  }
+}

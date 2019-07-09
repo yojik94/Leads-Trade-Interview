@@ -1,0 +1,66 @@
+@import '../../scss/commons';
+
+//@return .productModal
+@include b(productModal){
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0, .6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+
+  //@return .productModal__content
+  @include e(content){
+    width: 100%;
+    max-width: 750px;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+  }
+
+  //@return .productModal__title
+  @include e(title){
+    font-size: 24px;
+    margin-bottom: 10px;
+    @include mobile{
+      font-size: 18px;
+    }
+  }
+
+  //@return .productModal__description
+  @include e(description){
+    font-size: 18px;
+    margin: 10px 0;
+    @include mobile{
+      font-size: 16px;
+    }
+  }
+
+  //@return .productModal__price
+  @include e(price){
+    font-size: 26px;
+    text-align: right;
+    color: $red;
+    font-weight: 600;
+    padding: 0 20px;
+    @include mobile{
+      font-size: 22px;
+    }
+  }
+
+  //@return .productModal__close
+  @include e(close){
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    z-index: 101;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+}

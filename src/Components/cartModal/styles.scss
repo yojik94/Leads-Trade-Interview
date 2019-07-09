@@ -1,0 +1,53 @@
+@import '../../scss/commons';
+
+//@return .cartModal
+@include b(cartModal){
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0, .7);
+  z-index: 22;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+
+  //@return .cartModal__content
+  @include e(content){
+    max-width: 700px;
+    width: 100%;
+    padding: 20px 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+
+  //@return .cartModal__orderBtn
+  @include e(orderBtn){
+    background-color: $red;
+    color: white;
+    padding: 5px 10px;
+    display: inline-flex;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+      background-color: $rose;
+    }
+  }
+
+  //@return .cartModal__close
+  @include e(close){
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 65;
+  }
+
+}

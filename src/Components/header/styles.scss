@@ -1,0 +1,14 @@
+@import '../../scss/commons';
+
+//@return .header
+@include b(header){
+  padding: 10px;
+  background-color: $brand;
+
+  //Change styles for container block from header
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -1,0 +1,43 @@
+@import '../../scss/commons';
+
+//@return .orderForm
+@include b(orderForm){
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0, .7);
+  z-index: 87;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+
+  //@return .orderForm__form
+  @include e(form){
+    width: 100%;
+    max-width: 700px;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  //@return .orderForm__input
+  @include e(input){
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid $rose;
+    padding: 5px;
+  }
+
+  //@return .orderForm__btn
+  @include e(btn){
+    background-color: $rose;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+  }
+}

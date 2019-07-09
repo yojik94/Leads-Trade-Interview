@@ -1,0 +1,9 @@
+@import '../../scss/commons';
+
+//@return .logo
+@include b(logo){
+  text-transform: uppercase;
+  color: white;
+  font-size: 24px;
+  margin-right: 10px;
+}

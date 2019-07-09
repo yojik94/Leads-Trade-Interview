@@ -1,0 +1,34 @@
+@import '../../scss/commons';
+
+//@return .cart
+@include b(cart){
+  cursor: pointer;
+  position: relative;
+
+  //@return .cart__image
+  @include e(image){
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+
+  //@return .cart__totalPrice
+  @include e(totalPrice){
+    position: absolute;
+    bottom: -4px;
+    left: calc(-100% - 10px);
+    white-space: nowrap;
+  }
+
+  //@return .cart__totalItems
+  @include e(totalItems){
+    position: absolute;
+    top: -7px;
+    font-size: 15px;
+    left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0 6px;
+    color: $rose;
+  }
+}

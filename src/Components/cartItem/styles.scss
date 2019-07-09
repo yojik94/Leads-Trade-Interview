@@ -1,0 +1,19 @@
+@import '../../scss/commons';
+
+//@return .cartItem
+@include b(cartItem){
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px dashed black;
+  width: 100%;
+
+  &:nth-last-of-type(1){
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  @include e(title){
+    margin-right: 10px;
+  }
+}

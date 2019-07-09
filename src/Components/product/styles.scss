@@ -1,0 +1,62 @@
+@import '../../scss/commons';
+
+//@return .product
+@include b(product){
+  width: calc(25% - 10px);
+  margin: 5px;
+  cursor: pointer;
+
+  @include tablet{
+    width: calc(33.333333% - 10px);
+  }
+
+  @include mobileLandscape{
+    width: calc(50% - 10px);
+  }
+
+  //@return .product__photo
+  @include e(photo){
+    position: relative;
+    padding-bottom: 71%;
+    width: 100%;
+
+    //Create adaptive image of product
+    img{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  //@return .product__title
+  @include e(title){
+    margin: 5px 0;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  //@return .product__description
+  @include e(description){
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  //@return .product__price
+  @include e(price){
+    text-align: center;
+    font-size: 18px;
+  }
+
+  //@return .product__buy
+  @include e(buy){
+    text-align: right;
+    cursor: pointer;
+    transition: .2s;
+    &:hover{
+      color: $rose;
+    }
+  }
+}

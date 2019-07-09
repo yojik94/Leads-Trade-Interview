@@ -1,0 +1,22 @@
+@import '../../scss/commons';
+
+//@return .productsList
+@include b(productsList){
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px
+}
+
+
+//@return .sort
+@include b(sort){
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0 5px 0;
+
+  //@return .sort__item
+  @include e(item){
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
