@@ -13,7 +13,7 @@ class App extends Component {
     }
 
     /**
-     * After component verify if exist user cookies
+     * After component is mounted verify if exist user cookies
      */
     componentDidMount() {
         this.getCookise()
