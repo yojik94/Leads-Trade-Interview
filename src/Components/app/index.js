@@ -16,7 +16,7 @@ class App extends Component {
      * After component is mounted verify if exist user cookies
      */
     componentDidMount() {
-        this.getCookise()
+        this.getCookies()
     }
 
     /**
@@ -47,7 +47,7 @@ class App extends Component {
     /**
      * Get user cookies
      */
-    getCookise = () => {
+    getCookies = () => {
         this.setState({
             buyProducts: !!Cookies.get('buyProducts') ? Cookies.getJSON('buyProducts').buy : [],
             buyProductsTotalPrice: !!Cookies.get('buyProductsTotalPrice') ? Cookies.get('buyProductsTotalPrice') : 0
